@@ -36,24 +36,24 @@ greetAll = function () {
     return result.slice(0, -1);
 };
 var dates = prompt('enter function name', '');
-switch (dates === null || dates === void 0 ? void 0 : dates.toLowerCase()) {
+switch (dates) {
     case 'a':
         a('Hello!');
         break;
     case 'cube':
-        cube(3);
+        console.log(cube(3));
         break;
     case 'avg2':
-        avg2(5, 7);
+        console.log(avg2(5, 7));
         break;
     case 'sum3':
-        sum3(12, 5, 3);
+        console.log(sum3(12, 5, 3));
         break;
     case 'intRandom':
-        intRandom(3, 12);
+        console.log(intRandom(3, 12));
         break;
     case 'greetAll':
-        greetAll('Barsik', 'Tolik', 'Tom');
+        console.log(greetAll('Barsik', 'Tolik', 'Tom'));
         break;
-    default: 'This function not found';
+    default: console.log('This function not found');
 }

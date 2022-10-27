@@ -42,18 +42,18 @@ greetAll = function () {
 }
 
 let dates: string | null = prompt('enter function name', '');
-switch(dates?.toLowerCase()){
+switch(dates){
     case 'a': a('Hello!');
     break;
-    case 'cube': cube(3);
+    case 'cube': console.log(cube(3));
     break;
-    case 'avg2': avg2(5,7);
+    case 'avg2': console.log(avg2(5,7));
     break;
-    case 'sum3': sum3(12,5,3);
+    case 'sum3': console.log(sum3(12,5,3));
     break;
-    case 'intRandom': intRandom(3,12);
+    case 'intRandom': console.log(intRandom(3,12));
     break;
-    case 'greetAll': greetAll('Barsik', 'Tolik', 'Tom');
+    case 'greetAll': console.log(greetAll('Barsik', 'Tolik', 'Tom'));
     break;
-    default: 'This function not found';
+    default: console.log('This function not found');
 }
