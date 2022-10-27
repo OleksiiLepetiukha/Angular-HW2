@@ -15,45 +15,41 @@ avg2 = function (num1, num2) {
 };
 
 let sum3: (x?: number, y?: number, z?: number) => number;
-sum3 = function() {
+sum3 = function () {
     let result = 0;
-    for(let i = 0; i < arguments.length; i++){
+    for (let i = 0; i < arguments.length; i++) {
         result += arguments[i];
     }
     return result;
 };
 
 let intRandom: (min: number, max?: number) => number;
-intRandom = function(min, max){
-    if(max === undefined){
+intRandom = function (min, max) {
+    if (max === undefined) {
         max = min;
         min = 0;
     }
-    return Math.round(Math.random() * (max - min +1) + min);
+    return Math.round(Math.random() * (max - min + 1) + min);
 };
 
-let greetAll: (kotik1: string, kotik2: string, kotik3: string) => string;
-greetAll = function () {
-    let result: string = 'Hello';
-    for(let i = 0; i < arguments.length; i++){
-        result += ' ' + arguments[i] + ',';
-    }
-    return result.slice(0, -1);
+let greetAll: (...kotikName: string[]) => string;
+greetAll = function (...kotikName) {
+    return 'Hello ' + kotikName.join(', ');
 }
 
 let dates: string | null = prompt('enter function name', '');
-switch(dates){
+switch (dates) {
     case 'a': a('Hello!');
-    break;
+        break;
     case 'cube': console.log(cube(3));
-    break;
-    case 'avg2': console.log(avg2(5,7));
-    break;
-    case 'sum3': console.log(sum3(12,5,3));
-    break;
-    case 'intRandom': console.log(intRandom(3,12));
-    break;
+        break;
+    case 'avg2': console.log(avg2(5, 7));
+        break;
+    case 'sum3': console.log(sum3(12, 5, 3));
+        break;
+    case 'intRandom': console.log(intRandom(3, 12));
+        break;
     case 'greetAll': console.log(greetAll('Barsik', 'Tolik', 'Tom'));
-    break;
+        break;
     default: console.log('This function not found');
 }

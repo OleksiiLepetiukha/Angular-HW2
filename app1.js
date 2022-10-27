@@ -29,11 +29,11 @@ intRandom = function (min, max) {
 };
 var greetAll;
 greetAll = function () {
-    var result = 'Hello';
-    for (var i = 0; i < arguments.length; i++) {
-        result += ' ' + arguments[i] + ',';
+    var kotikName = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        kotikName[_i] = arguments[_i];
     }
-    return result.slice(0, -1);
+    return 'Hello ' + kotikName.join(', ');
 };
 var dates = prompt('enter function name', '');
 switch (dates) {
